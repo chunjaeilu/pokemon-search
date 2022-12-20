@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokemon</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="header container">
+      <a href="/"><h1>Pokemon</h1></a>
+      <form action="/search" method="get">
+        <label class="hidden" for="search">검색</label>
+        <input type="text" name="search" id="search" autofocus />
+        <button type="submit">검색</button>
+      </form>
+    </div>
+    <ul class="container">
+      <% for( let i = 0; i < pokemonData.length; i++ ) { %>
+      <li>
+        <h3>no<%= i+1 %>. <%= pokemonData[i].name %></h3>
+        <img
+          src="<%= pokemonData[i].imgUrl %>"
+          alt="<%= pokemonData[i].name %> "
+        />
+
+        <p><b>TYPE</b> : <%= pokemonData[i].type %></p>
+
+        <p><%= pokemonData[i].desc %></p>
+      </li>
+      <% } %>
+    </ul>
+
+    <ul class="container popup">
+      <% for( let i = 0; i < pokemonData.length; i++ ) { if(searchEl ==
+      pokemonData[i].name) { %>
+      <li>
+        <h3>no<%= i+1 %>. <%= pokemonData[i].name %></h3>
+        <img
+          src="<%= pokemonData[i].imgUrl %>"
+          alt="<%= pokemonData[i].name %> "
+        />
+        <p><b>TYPE</b> : <%= pokemonData[i].type %></p>
+
+        <p><%= pokemonData[i].desc %></p>
+      </li>
+      <% }} %>
+    </ul>
+  </body>
+</html>

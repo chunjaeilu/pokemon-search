@@ -1,0 +1,60 @@
+/* style.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container {
+  max-width: 1000px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.hidden {
+  display: none;
+}
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
+ul li {
+  width: calc(50% - 20px);
+  border: 0.1px solid #ccc;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 4px 4px 4px #ccc;
+}
+
+ul li p {
+  margin-top: 15px;
+}
+
+.popup {
+  width: 460px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.popup li {
+  width: 100%;
+  border: 10px inset #222;
+  background-image: url(/images/bg-pattern2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 0px 0px 100px #aaa;
+  color: #fff;
+}
